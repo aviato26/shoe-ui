@@ -1,6 +1,6 @@
 
 import * as THREE from 'three';
-import css from './css/style.css';
+import './css/style.css';
 import vertex from './shaders/vertex.js';
 import fragment from './shaders/fragment.js';
 import tShader from './shaders/triangleShader.js';
@@ -57,8 +57,8 @@ export default class Main
         time: { value: 0.0 }
       },
 
-      vertexShader: vertex.vert,
-      fragmentShader: tShader.triangleShader,
+      vertexShader: vertex,
+      fragmentShader: tShader,
      });    
     
     this.material = new THREE.ShaderMaterial( { 
@@ -71,8 +71,8 @@ export default class Main
         tex2: { value: new THREE.TextureLoader().load(shoe2) }
       },
 
-      vertexShader: vertex.vert,
-      fragmentShader: fragment.frag
+      vertexShader: vertex,
+      fragmentShader: fragment
      } );
 
     this.mainMesh = new THREE.Mesh( this.geometry, this.material );
@@ -200,7 +200,7 @@ export default class Main
       this.mouseDown = false;
     }
 
-    console.log(one, two);
+    //console.log(one, two);
 
     if(this.count <= 1){
       this.count += 0.05;

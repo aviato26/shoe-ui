@@ -1,7 +1,7 @@
 
 
 
-exports.frag = 
+const frag = 
 `
 uniform vec2 res;
 uniform float time;
@@ -135,3 +135,5 @@ void main() {
   //gl_FragColor = vec4(bufferTexture, 1.0);  
 }
 `
+
+export default frag;
