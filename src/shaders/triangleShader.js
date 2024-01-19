@@ -1,5 +1,5 @@
 
-exports.triangleShader = 
+const triangleShader = 
 `
     varying vec2 vuv;
     uniform float time;
@@ -30,3 +30,6 @@ exports.triangleShader =
         //gl_FragColor = vec4(dist, 0.0, 0.0);        
     }
 `
+
+
+export default triangleShader;
